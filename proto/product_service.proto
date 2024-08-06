@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package book;
+
+import "google/protobuf/empty.proto";
+
+// Required to generate go
+option go_package = "./";
+option java_package = "com.dmsc.service.model.product";
+option java_multiple_files = true;
+option java_outer_classname = "ProductProto";
+
+message Product {
+  string name = 1;
+  int64 price = 2;
+  string description = 3;
+  string category = 4;
+  int32 availability = 5;
+}
+
+message ProductResponse {
+  string id = 1;
+  string name = 2;
+  int64 price = 3;
+  string description = 4;
+  string category = 5;
+  int32 availability = 6;
+}
+
+message ListProducts {
+    repeated ProductResponse products = 1;
+}
+
+message ItemRequest {
+  string id = 1;
+}
+
+message CategoryRequest {
+  string category = 1;
+}
+
+service ProductService {
+  rpc List(google.protobuf.Empty) returns (ListProducts);
+  rpc ListByCategory(CategoryRequest) returns (ListProducts);
+}
+
+service AdminProductService {
+  rpc Add(Product) returns (ProductResponse);
+  rpc Delete(ItemRequest) returns (google.protobuf.Empty);
+}
