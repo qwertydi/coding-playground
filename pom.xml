@@ -22,6 +22,11 @@
 		<url/>
 	</scm>
 
+	<modules>
+		<module>product-catalog-service</module>
+		<module>grpc-java-models</module>
+	</modules>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
