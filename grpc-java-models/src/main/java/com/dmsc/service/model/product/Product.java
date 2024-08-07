@@ -5,11 +5,11 @@
 package com.dmsc.service.model.product;
 
 /**
- * Protobuf type {@code book.Product}
+ * Protobuf type {@code products.Product}
  */
 public final class Product extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:book.Product)
+    // @@protoc_insertion_point(message_implements:products.Product)
     ProductOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Product.newBuilder() to construct.
@@ -31,13 +31,13 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.dmsc.service.model.product.ProductProto.internal_static_book_Product_descriptor;
+    return com.dmsc.service.model.product.ProductProto.internal_static_products_Product_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.dmsc.service.model.product.ProductProto.internal_static_book_Product_fieldAccessorTable
+    return com.dmsc.service.model.product.ProductProto.internal_static_products_Product_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.dmsc.service.model.product.Product.class, com.dmsc.service.model.product.Product.Builder.class);
   }
@@ -381,21 +381,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code book.Product}
+   * Protobuf type {@code products.Product}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:book.Product)
+      // @@protoc_insertion_point(builder_implements:products.Product)
       com.dmsc.service.model.product.ProductOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.dmsc.service.model.product.ProductProto.internal_static_book_Product_descriptor;
+      return com.dmsc.service.model.product.ProductProto.internal_static_products_Product_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.dmsc.service.model.product.ProductProto.internal_static_book_Product_fieldAccessorTable
+      return com.dmsc.service.model.product.ProductProto.internal_static_products_Product_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.dmsc.service.model.product.Product.class, com.dmsc.service.model.product.Product.Builder.class);
     }
@@ -425,7 +425,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.dmsc.service.model.product.ProductProto.internal_static_book_Product_descriptor;
+      return com.dmsc.service.model.product.ProductProto.internal_static_products_Product_descriptor;
     }
 
     @java.lang.Override
@@ -894,10 +894,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:book.Product)
+    // @@protoc_insertion_point(builder_scope:products.Product)
   }
 
-  // @@protoc_insertion_point(class_scope:book.Product)
+  // @@protoc_insertion_point(class_scope:products.Product)
   private static final com.dmsc.service.model.product.Product DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.dmsc.service.model.product.Product();

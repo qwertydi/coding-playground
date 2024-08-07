@@ -5,7 +5,7 @@
 package com.dmsc.service.model.product;
 
 public interface ItemRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:book.ItemRequest)
+    // @@protoc_insertion_point(interface_extends:products.ItemRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

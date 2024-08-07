@@ -5,29 +5,29 @@
 package com.dmsc.service.model.product;
 
 public interface ListProductsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:book.ListProducts)
+    // @@protoc_insertion_point(interface_extends:products.ListProducts)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   java.util.List<com.dmsc.service.model.product.ProductResponse> 
       getProductsList();
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   com.dmsc.service.model.product.ProductResponse getProducts(int index);
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   int getProductsCount();
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   java.util.List<? extends com.dmsc.service.model.product.ProductResponseOrBuilder> 
       getProductsOrBuilderList();
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   com.dmsc.service.model.product.ProductResponseOrBuilder getProductsOrBuilder(
       int index);

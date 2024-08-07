@@ -12,7 +12,7 @@ public final class AdminProductServiceGrpc {
 
   private AdminProductServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "book.AdminProductService";
+  public static final java.lang.String SERVICE_NAME = "products.AdminProductService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.dmsc.service.model.product.Product,

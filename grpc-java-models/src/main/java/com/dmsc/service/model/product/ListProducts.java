@@ -5,11 +5,11 @@
 package com.dmsc.service.model.product;
 
 /**
- * Protobuf type {@code book.ListProducts}
+ * Protobuf type {@code products.ListProducts}
  */
 public final class ListProducts extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:book.ListProducts)
+    // @@protoc_insertion_point(message_implements:products.ListProducts)
     ListProductsOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ListProducts.newBuilder() to construct.
@@ -29,13 +29,13 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.dmsc.service.model.product.ProductProto.internal_static_book_ListProducts_descriptor;
+    return com.dmsc.service.model.product.ProductProto.internal_static_products_ListProducts_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.dmsc.service.model.product.ProductProto.internal_static_book_ListProducts_fieldAccessorTable
+    return com.dmsc.service.model.product.ProductProto.internal_static_products_ListProducts_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.dmsc.service.model.product.ListProducts.class, com.dmsc.service.model.product.ListProducts.Builder.class);
   }
@@ -44,14 +44,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.dmsc.service.model.product.ProductResponse> products_;
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   @java.lang.Override
   public java.util.List<com.dmsc.service.model.product.ProductResponse> getProductsList() {
     return products_;
   }
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.dmsc.service.model.product.ProductResponseOrBuilder> 
@@ -59,21 +59,21 @@ private static final long serialVersionUID = 0L;
     return products_;
   }
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   @java.lang.Override
   public int getProductsCount() {
     return products_.size();
   }
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   @java.lang.Override
   public com.dmsc.service.model.product.ProductResponse getProducts(int index) {
     return products_.get(index);
   }
   /**
-   * <code>repeated .book.ProductResponse products = 1;</code>
+   * <code>repeated .products.ProductResponse products = 1;</code>
    */
   @java.lang.Override
   public com.dmsc.service.model.product.ProductResponseOrBuilder getProductsOrBuilder(
@@ -241,21 +241,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code book.ListProducts}
+   * Protobuf type {@code products.ListProducts}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:book.ListProducts)
+      // @@protoc_insertion_point(builder_implements:products.ListProducts)
       com.dmsc.service.model.product.ListProductsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.dmsc.service.model.product.ProductProto.internal_static_book_ListProducts_descriptor;
+      return com.dmsc.service.model.product.ProductProto.internal_static_products_ListProducts_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.dmsc.service.model.product.ProductProto.internal_static_book_ListProducts_fieldAccessorTable
+      return com.dmsc.service.model.product.ProductProto.internal_static_products_ListProducts_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.dmsc.service.model.product.ListProducts.class, com.dmsc.service.model.product.ListProducts.Builder.class);
     }
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.dmsc.service.model.product.ProductProto.internal_static_book_ListProducts_descriptor;
+      return com.dmsc.service.model.product.ProductProto.internal_static_products_ListProducts_descriptor;
     }
 
     @java.lang.Override
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
         com.dmsc.service.model.product.ProductResponse, com.dmsc.service.model.product.ProductResponse.Builder, com.dmsc.service.model.product.ProductResponseOrBuilder> productsBuilder_;
 
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public java.util.List<com.dmsc.service.model.product.ProductResponse> getProductsList() {
       if (productsBuilder_ == null) {
@@ -478,7 +478,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public int getProductsCount() {
       if (productsBuilder_ == null) {
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public com.dmsc.service.model.product.ProductResponse getProducts(int index) {
       if (productsBuilder_ == null) {
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder setProducts(
         int index, com.dmsc.service.model.product.ProductResponse value) {
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder setProducts(
         int index, com.dmsc.service.model.product.ProductResponse.Builder builderForValue) {
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder addProducts(com.dmsc.service.model.product.ProductResponse value) {
       if (productsBuilder_ == null) {
@@ -545,7 +545,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder addProducts(
         int index, com.dmsc.service.model.product.ProductResponse value) {
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder addProducts(
         com.dmsc.service.model.product.ProductResponse.Builder builderForValue) {
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder addProducts(
         int index, com.dmsc.service.model.product.ProductResponse.Builder builderForValue) {
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder addAllProducts(
         java.lang.Iterable<? extends com.dmsc.service.model.product.ProductResponse> values) {
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder clearProducts() {
       if (productsBuilder_ == null) {
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public Builder removeProducts(int index) {
       if (productsBuilder_ == null) {
@@ -631,14 +631,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public com.dmsc.service.model.product.ProductResponse.Builder getProductsBuilder(
         int index) {
       return getProductsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public com.dmsc.service.model.product.ProductResponseOrBuilder getProductsOrBuilder(
         int index) {
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public java.util.List<? extends com.dmsc.service.model.product.ProductResponseOrBuilder> 
          getProductsOrBuilderList() {
@@ -659,14 +659,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public com.dmsc.service.model.product.ProductResponse.Builder addProductsBuilder() {
       return getProductsFieldBuilder().addBuilder(
           com.dmsc.service.model.product.ProductResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public com.dmsc.service.model.product.ProductResponse.Builder addProductsBuilder(
         int index) {
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
           index, com.dmsc.service.model.product.ProductResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .book.ProductResponse products = 1;</code>
+     * <code>repeated .products.ProductResponse products = 1;</code>
      */
     public java.util.List<com.dmsc.service.model.product.ProductResponse.Builder> 
          getProductsBuilderList() {
@@ -707,10 +707,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:book.ListProducts)
+    // @@protoc_insertion_point(builder_scope:products.ListProducts)
   }
 
-  // @@protoc_insertion_point(class_scope:book.ListProducts)
+  // @@protoc_insertion_point(class_scope:products.ListProducts)
   private static final com.dmsc.service.model.product.ListProducts DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.dmsc.service.model.product.ListProducts();
