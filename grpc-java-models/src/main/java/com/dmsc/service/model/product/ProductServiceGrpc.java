@@ -12,7 +12,7 @@ public final class ProductServiceGrpc {
 
   private ProductServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "book.ProductService";
+  public static final java.lang.String SERVICE_NAME = "products.ProductService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,

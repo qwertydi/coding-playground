@@ -5,7 +5,7 @@
 package com.dmsc.service.model.product;
 
 public interface CategoryRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:book.CategoryRequest)
+    // @@protoc_insertion_point(interface_extends:products.CategoryRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package book;
+package products;
 
 import "google/protobuf/empty.proto";
 
@@ -38,6 +38,11 @@ message ItemRequest {
 message CategoryRequest {
   string category = 1;
 }
+
+//service StockManagement {
+//  rpc IncreaseStock() returns ();
+//  rpc DecreaseStock() returns ();
+//}
 
 service ProductService {
   rpc List(google.protobuf.Empty) returns (ListProducts);

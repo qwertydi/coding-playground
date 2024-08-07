@@ -16,30 +16,30 @@ public final class ProductProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_book_Product_descriptor;
+    internal_static_products_Product_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_book_Product_fieldAccessorTable;
+      internal_static_products_Product_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_book_ProductResponse_descriptor;
+    internal_static_products_ProductResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_book_ProductResponse_fieldAccessorTable;
+      internal_static_products_ProductResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_book_ListProducts_descriptor;
+    internal_static_products_ListProducts_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_book_ListProducts_fieldAccessorTable;
+      internal_static_products_ListProducts_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_book_ItemRequest_descriptor;
+    internal_static_products_ItemRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_book_ItemRequest_fieldAccessorTable;
+      internal_static_products_ItemRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_book_CategoryRequest_descriptor;
+    internal_static_products_CategoryRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_book_CategoryRequest_fieldAccessorTable;
+      internal_static_products_CategoryRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -49,59 +49,60 @@ public final class ProductProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025product_service.proto\022\004book\032\033google/pr" +
-      "otobuf/empty.proto\"c\n\007Product\022\014\n\004name\030\001 " +
-      "\001(\t\022\r\n\005price\030\002 \001(\003\022\023\n\013description\030\003 \001(\t\022" +
-      "\020\n\010category\030\004 \001(\t\022\024\n\014availability\030\005 \001(\005\"" +
-      "w\n\017ProductResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
-      " \001(\t\022\r\n\005price\030\003 \001(\003\022\023\n\013description\030\004 \001(\t" +
-      "\022\020\n\010category\030\005 \001(\t\022\024\n\014availability\030\006 \001(\005" +
-      "\"7\n\014ListProducts\022\'\n\010products\030\001 \003(\0132\025.boo" +
-      "k.ProductResponse\"\031\n\013ItemRequest\022\n\n\002id\030\001" +
-      " \001(\t\"#\n\017CategoryRequest\022\020\n\010category\030\001 \001(" +
-      "\t2\201\001\n\016ProductService\0222\n\004List\022\026.google.pr" +
-      "otobuf.Empty\032\022.book.ListProducts\022;\n\016List" +
-      "ByCategory\022\025.book.CategoryRequest\032\022.book" +
-      ".ListProducts2w\n\023AdminProductService\022+\n\003" +
-      "Add\022\r.book.Product\032\025.book.ProductRespons" +
-      "e\0223\n\006Delete\022\021.book.ItemRequest\032\026.google." +
-      "protobuf.EmptyB4\n\036com.dmsc.service.model" +
-      ".productB\014ProductProtoP\001Z\002./b\006proto3"
+      "\n\025product_service.proto\022\010products\032\033googl" +
+      "e/protobuf/empty.proto\"c\n\007Product\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\r\n\005price\030\002 \001(\003\022\023\n\013description\030\003 " +
+      "\001(\t\022\020\n\010category\030\004 \001(\t\022\024\n\014availability\030\005 " +
+      "\001(\005\"w\n\017ProductResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004na" +
+      "me\030\002 \001(\t\022\r\n\005price\030\003 \001(\003\022\023\n\013description\030\004" +
+      " \001(\t\022\020\n\010category\030\005 \001(\t\022\024\n\014availability\030\006" +
+      " \001(\005\";\n\014ListProducts\022+\n\010products\030\001 \003(\0132\031" +
+      ".products.ProductResponse\"\031\n\013ItemRequest" +
+      "\022\n\n\002id\030\001 \001(\t\"#\n\017CategoryRequest\022\020\n\010categ" +
+      "ory\030\001 \001(\t2\215\001\n\016ProductService\0226\n\004List\022\026.g" +
+      "oogle.protobuf.Empty\032\026.products.ListProd" +
+      "ucts\022C\n\016ListByCategory\022\031.products.Catego" +
+      "ryRequest\032\026.products.ListProducts2\203\001\n\023Ad" +
+      "minProductService\0223\n\003Add\022\021.products.Prod" +
+      "uct\032\031.products.ProductResponse\0227\n\006Delete" +
+      "\022\025.products.ItemRequest\032\026.google.protobu" +
+      "f.EmptyB4\n\036com.dmsc.service.model.produc" +
+      "tB\014ProductProtoP\001Z\002./b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.EmptyProto.getDescriptor(),
         });
-    internal_static_book_Product_descriptor =
+    internal_static_products_Product_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_book_Product_fieldAccessorTable = new
+    internal_static_products_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_book_Product_descriptor,
+        internal_static_products_Product_descriptor,
         new java.lang.String[] { "Name", "Price", "Description", "Category", "Availability", });
-    internal_static_book_ProductResponse_descriptor =
+    internal_static_products_ProductResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_book_ProductResponse_fieldAccessorTable = new
+    internal_static_products_ProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_book_ProductResponse_descriptor,
+        internal_static_products_ProductResponse_descriptor,
         new java.lang.String[] { "Id", "Name", "Price", "Description", "Category", "Availability", });
-    internal_static_book_ListProducts_descriptor =
+    internal_static_products_ListProducts_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_book_ListProducts_fieldAccessorTable = new
+    internal_static_products_ListProducts_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_book_ListProducts_descriptor,
+        internal_static_products_ListProducts_descriptor,
         new java.lang.String[] { "Products", });
-    internal_static_book_ItemRequest_descriptor =
+    internal_static_products_ItemRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_book_ItemRequest_fieldAccessorTable = new
+    internal_static_products_ItemRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_book_ItemRequest_descriptor,
+        internal_static_products_ItemRequest_descriptor,
         new java.lang.String[] { "Id", });
-    internal_static_book_CategoryRequest_descriptor =
+    internal_static_products_CategoryRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_book_CategoryRequest_fieldAccessorTable = new
+    internal_static_products_CategoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_book_CategoryRequest_descriptor,
+        internal_static_products_CategoryRequest_descriptor,
         new java.lang.String[] { "Category", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
