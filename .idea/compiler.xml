@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="grpc-java-models" />
         <module name="product-catalog-service" />
+        <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="kotlinplayground" options="" />
       <module name="playground" options="" />
       <module name="product-catalog-service" options="" />
+      <module name="user-service" options="" />
     </option>
   </component>
 </project>

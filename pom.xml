@@ -25,6 +25,7 @@
 	<modules>
 		<module>product-catalog-service</module>
 		<module>grpc-java-models</module>
+		<module>user-service</module>
 	</modules>
 
 	<dependencyManagement>
