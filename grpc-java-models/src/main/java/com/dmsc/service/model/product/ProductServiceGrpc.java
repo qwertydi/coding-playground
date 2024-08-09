@@ -77,6 +77,99 @@ public final class ProductServiceGrpc {
     return getListByCategoryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.dmsc.service.model.product.ProductStockQuantity,
+      com.google.protobuf.Empty> getIncreaseStockMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "IncreaseStock",
+      requestType = com.dmsc.service.model.product.ProductStockQuantity.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.dmsc.service.model.product.ProductStockQuantity,
+      com.google.protobuf.Empty> getIncreaseStockMethod() {
+    io.grpc.MethodDescriptor<com.dmsc.service.model.product.ProductStockQuantity, com.google.protobuf.Empty> getIncreaseStockMethod;
+    if ((getIncreaseStockMethod = ProductServiceGrpc.getIncreaseStockMethod) == null) {
+      synchronized (ProductServiceGrpc.class) {
+        if ((getIncreaseStockMethod = ProductServiceGrpc.getIncreaseStockMethod) == null) {
+          ProductServiceGrpc.getIncreaseStockMethod = getIncreaseStockMethod =
+              io.grpc.MethodDescriptor.<com.dmsc.service.model.product.ProductStockQuantity, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IncreaseStock"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.dmsc.service.model.product.ProductStockQuantity.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("IncreaseStock"))
+              .build();
+        }
+      }
+    }
+    return getIncreaseStockMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.dmsc.service.model.product.ProductStockQuantity,
+      com.google.protobuf.Empty> getDecreaseStockMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DecreaseStock",
+      requestType = com.dmsc.service.model.product.ProductStockQuantity.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.dmsc.service.model.product.ProductStockQuantity,
+      com.google.protobuf.Empty> getDecreaseStockMethod() {
+    io.grpc.MethodDescriptor<com.dmsc.service.model.product.ProductStockQuantity, com.google.protobuf.Empty> getDecreaseStockMethod;
+    if ((getDecreaseStockMethod = ProductServiceGrpc.getDecreaseStockMethod) == null) {
+      synchronized (ProductServiceGrpc.class) {
+        if ((getDecreaseStockMethod = ProductServiceGrpc.getDecreaseStockMethod) == null) {
+          ProductServiceGrpc.getDecreaseStockMethod = getDecreaseStockMethod =
+              io.grpc.MethodDescriptor.<com.dmsc.service.model.product.ProductStockQuantity, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DecreaseStock"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.dmsc.service.model.product.ProductStockQuantity.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("DecreaseStock"))
+              .build();
+        }
+      }
+    }
+    return getDecreaseStockMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.dmsc.service.model.product.ItemRequest,
+      com.dmsc.service.model.product.ProductResponse> getProductByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ProductById",
+      requestType = com.dmsc.service.model.product.ItemRequest.class,
+      responseType = com.dmsc.service.model.product.ProductResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.dmsc.service.model.product.ItemRequest,
+      com.dmsc.service.model.product.ProductResponse> getProductByIdMethod() {
+    io.grpc.MethodDescriptor<com.dmsc.service.model.product.ItemRequest, com.dmsc.service.model.product.ProductResponse> getProductByIdMethod;
+    if ((getProductByIdMethod = ProductServiceGrpc.getProductByIdMethod) == null) {
+      synchronized (ProductServiceGrpc.class) {
+        if ((getProductByIdMethod = ProductServiceGrpc.getProductByIdMethod) == null) {
+          ProductServiceGrpc.getProductByIdMethod = getProductByIdMethod =
+              io.grpc.MethodDescriptor.<com.dmsc.service.model.product.ItemRequest, com.dmsc.service.model.product.ProductResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProductById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.dmsc.service.model.product.ItemRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.dmsc.service.model.product.ProductResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("ProductById"))
+              .build();
+        }
+      }
+    }
+    return getProductByIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +231,27 @@ public final class ProductServiceGrpc {
         io.grpc.stub.StreamObserver<com.dmsc.service.model.product.ListProducts> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListByCategoryMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void increaseStock(com.dmsc.service.model.product.ProductStockQuantity request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIncreaseStockMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void decreaseStock(com.dmsc.service.model.product.ProductStockQuantity request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDecreaseStockMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void productById(com.dmsc.service.model.product.ItemRequest request,
+        io.grpc.stub.StreamObserver<com.dmsc.service.model.product.ProductResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProductByIdMethod(), responseObserver);
+    }
   }
 
   /**
@@ -182,6 +296,30 @@ public final class ProductServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListByCategoryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void increaseStock(com.dmsc.service.model.product.ProductStockQuantity request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getIncreaseStockMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void decreaseStock(com.dmsc.service.model.product.ProductStockQuantity request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDecreaseStockMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void productById(com.dmsc.service.model.product.ItemRequest request,
+        io.grpc.stub.StreamObserver<com.dmsc.service.model.product.ProductResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getProductByIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -212,6 +350,27 @@ public final class ProductServiceGrpc {
     public com.dmsc.service.model.product.ListProducts listByCategory(com.dmsc.service.model.product.CategoryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListByCategoryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty increaseStock(com.dmsc.service.model.product.ProductStockQuantity request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIncreaseStockMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty decreaseStock(com.dmsc.service.model.product.ProductStockQuantity request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDecreaseStockMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.dmsc.service.model.product.ProductResponse productById(com.dmsc.service.model.product.ItemRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getProductByIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -246,10 +405,37 @@ public final class ProductServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListByCategoryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> increaseStock(
+        com.dmsc.service.model.product.ProductStockQuantity request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getIncreaseStockMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> decreaseStock(
+        com.dmsc.service.model.product.ProductStockQuantity request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDecreaseStockMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.dmsc.service.model.product.ProductResponse> productById(
+        com.dmsc.service.model.product.ItemRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getProductByIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST = 0;
   private static final int METHODID_LIST_BY_CATEGORY = 1;
+  private static final int METHODID_INCREASE_STOCK = 2;
+  private static final int METHODID_DECREASE_STOCK = 3;
+  private static final int METHODID_PRODUCT_BY_ID = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,6 +461,18 @@ public final class ProductServiceGrpc {
         case METHODID_LIST_BY_CATEGORY:
           serviceImpl.listByCategory((com.dmsc.service.model.product.CategoryRequest) request,
               (io.grpc.stub.StreamObserver<com.dmsc.service.model.product.ListProducts>) responseObserver);
+          break;
+        case METHODID_INCREASE_STOCK:
+          serviceImpl.increaseStock((com.dmsc.service.model.product.ProductStockQuantity) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_DECREASE_STOCK:
+          serviceImpl.decreaseStock((com.dmsc.service.model.product.ProductStockQuantity) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_PRODUCT_BY_ID:
+          serviceImpl.productById((com.dmsc.service.model.product.ItemRequest) request,
+              (io.grpc.stub.StreamObserver<com.dmsc.service.model.product.ProductResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -308,6 +506,27 @@ public final class ProductServiceGrpc {
               com.dmsc.service.model.product.CategoryRequest,
               com.dmsc.service.model.product.ListProducts>(
                 service, METHODID_LIST_BY_CATEGORY)))
+        .addMethod(
+          getIncreaseStockMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.dmsc.service.model.product.ProductStockQuantity,
+              com.google.protobuf.Empty>(
+                service, METHODID_INCREASE_STOCK)))
+        .addMethod(
+          getDecreaseStockMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.dmsc.service.model.product.ProductStockQuantity,
+              com.google.protobuf.Empty>(
+                service, METHODID_DECREASE_STOCK)))
+        .addMethod(
+          getProductByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.dmsc.service.model.product.ItemRequest,
+              com.dmsc.service.model.product.ProductResponse>(
+                service, METHODID_PRODUCT_BY_ID)))
         .build();
   }
 
@@ -358,6 +577,9 @@ public final class ProductServiceGrpc {
               .setSchemaDescriptor(new ProductServiceFileDescriptorSupplier())
               .addMethod(getListMethod())
               .addMethod(getListByCategoryMethod())
+              .addMethod(getIncreaseStockMethod())
+              .addMethod(getDecreaseStockMethod())
+              .addMethod(getProductByIdMethod())
               .build();
         }
       }
