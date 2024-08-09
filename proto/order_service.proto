@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package orders;
+
+import "google/protobuf/timestamp.proto";
+
+// Required to generate go
+option go_package = "github.com/qwertydi/playground/pb/v1";
+option java_package = "com.dmsc.service.model.order";
+option java_multiple_files = true;
+option java_outer_classname = "OrderProto";
+
+enum ORDER_STATUS {
+  PENDING = 0;
+  PROCESSING = 1;
+  SENT = 2;
+  RECEIVED = 3;
+}
+
+message CreateOrderRequest {
+  repeated OrderProduct products = 1;
+  string user_id = 2;
+}
+
+message OrderResponse {
+  string id = 1;
+  string user_id = 2;
+  repeated OrderProduct products = 3;
+  ORDER_STATUS status = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
+}
+
+message OrderProduct {
+  string product_id = 1;
+  int64 quantity = 2;
+  ORDER_STATUS status = 3;
+}
+
+message OrderItem {
+  string id = 1;
+}
+
+message OrderStatus {
+  string id = 1;
+  ORDER_STATUS status = 2;
+}
+
+service OrderService {
+  rpc CreateOrder(CreateOrderRequest) returns (OrderResponse);
+  rpc GetOrder(OrderItem) returns (OrderResponse);
+  rpc UpdateOrderStatus(OrderStatus) returns (OrderResponse);
+}

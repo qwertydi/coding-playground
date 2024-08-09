@@ -40,6 +40,11 @@ public final class ProductProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_products_CategoryRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_products_ProductStockQuantity_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_products_ProductStockQuantity_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -59,15 +64,22 @@ public final class ProductProto {
       " \001(\005\";\n\014ListProducts\022+\n\010products\030\001 \003(\0132\031" +
       ".products.ProductResponse\"\031\n\013ItemRequest" +
       "\022\n\n\002id\030\001 \001(\t\"#\n\017CategoryRequest\022\020\n\010categ" +
-      "ory\030\001 \001(\t2\215\001\n\016ProductService\0226\n\004List\022\026.g" +
-      "oogle.protobuf.Empty\032\026.products.ListProd" +
-      "ucts\022C\n\016ListByCategory\022\031.products.Catego" +
-      "ryRequest\032\026.products.ListProducts2\203\001\n\023Ad" +
-      "minProductService\0223\n\003Add\022\021.products.Prod" +
-      "uct\032\031.products.ProductResponse\0227\n\006Delete" +
-      "\022\025.products.ItemRequest\032\026.google.protobu" +
-      "f.EmptyB4\n\036com.dmsc.service.model.produc" +
-      "tB\014ProductProtoP\001Z\002./b\006proto3"
+      "ory\030\001 \001(\t\"4\n\024ProductStockQuantity\022\n\n\002id\030" +
+      "\001 \001(\t\022\020\n\010quantity\030\002 \001(\0052\340\002\n\016ProductServi" +
+      "ce\0226\n\004List\022\026.google.protobuf.Empty\032\026.pro" +
+      "ducts.ListProducts\022C\n\016ListByCategory\022\031.p" +
+      "roducts.CategoryRequest\032\026.products.ListP" +
+      "roducts\022G\n\rIncreaseStock\022\036.products.Prod" +
+      "uctStockQuantity\032\026.google.protobuf.Empty" +
+      "\022G\n\rDecreaseStock\022\036.products.ProductStoc" +
+      "kQuantity\032\026.google.protobuf.Empty\022?\n\013Pro" +
+      "ductById\022\025.products.ItemRequest\032\031.produc" +
+      "ts.ProductResponse2\203\001\n\023AdminProductServi" +
+      "ce\0223\n\003Add\022\021.products.Product\032\031.products." +
+      "ProductResponse\0227\n\006Delete\022\025.products.Ite" +
+      "mRequest\032\026.google.protobuf.EmptyB4\n\036com." +
+      "dmsc.service.model.productB\014ProductProto" +
+      "P\001Z\002./b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -104,6 +116,12 @@ public final class ProductProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_products_CategoryRequest_descriptor,
         new java.lang.String[] { "Category", });
+    internal_static_products_ProductStockQuantity_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_products_ProductStockQuantity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_products_ProductStockQuantity_descriptor,
+        new java.lang.String[] { "Id", "Quantity", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 
