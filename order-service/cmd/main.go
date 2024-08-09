@@ -79,7 +79,7 @@ func runGrpcServer(
 	gprcLogger := grpc.UnaryInterceptor(server.GrpcLogger)
 	grpcServer := grpc.NewServer(gprcLogger)
 
-	grpcClient, err := grpc.NewClient("localhost:9090", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	grpcClient, err := grpc.NewClient(config.GRPCProductsClientAddress, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatal().Err(err).Msg("cannot create grpc client")
 	}
