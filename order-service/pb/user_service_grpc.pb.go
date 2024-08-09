@@ -4,7 +4,7 @@
 // - protoc             v5.27.3
 // source: user_service.proto
 
-package __
+package v1
 
 import (
 	context "context"

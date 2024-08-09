@@ -4,7 +4,7 @@
 // - protoc             v5.27.3
 // source: product_service.proto
 
-package __
+package v1
 
 import (
 	context "context"
@@ -22,6 +22,9 @@ const _ = grpc.SupportPackageIsVersion9
 const (
 	ProductService_List_FullMethodName           = "/products.ProductService/List"
 	ProductService_ListByCategory_FullMethodName = "/products.ProductService/ListByCategory"
+	ProductService_IncreaseStock_FullMethodName  = "/products.ProductService/IncreaseStock"
+	ProductService_DecreaseStock_FullMethodName  = "/products.ProductService/DecreaseStock"
+	ProductService_ProductById_FullMethodName    = "/products.ProductService/ProductById"
 )
 
 // ProductServiceClient is the client API for ProductService service.
@@ -30,6 +33,9 @@ const (
 type ProductServiceClient interface {
 	List(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ListProducts, error)
 	ListByCategory(ctx context.Context, in *CategoryRequest, opts ...grpc.CallOption) (*ListProducts, error)
+	IncreaseStock(ctx context.Context, in *ProductStockQuantity, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	DecreaseStock(ctx context.Context, in *ProductStockQuantity, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	ProductById(ctx context.Context, in *ItemRequest, opts ...grpc.CallOption) (*ProductResponse, error)
 }
 
 type productServiceClient struct {
@@ -60,12 +66,45 @@ func (c *productServiceClient) ListByCategory(ctx context.Context, in *CategoryR
 	return out, nil
 }
 
+func (c *productServiceClient) IncreaseStock(ctx context.Context, in *ProductStockQuantity, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, ProductService_IncreaseStock_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *productServiceClient) DecreaseStock(ctx context.Context, in *ProductStockQuantity, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, ProductService_DecreaseStock_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *productServiceClient) ProductById(ctx context.Context, in *ItemRequest, opts ...grpc.CallOption) (*ProductResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ProductResponse)
+	err := c.cc.Invoke(ctx, ProductService_ProductById_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ProductServiceServer is the server API for ProductService service.
 // All implementations must embed UnimplementedProductServiceServer
 // for forward compatibility.
 type ProductServiceServer interface {
 	List(context.Context, *emptypb.Empty) (*ListProducts, error)
 	ListByCategory(context.Context, *CategoryRequest) (*ListProducts, error)
+	IncreaseStock(context.Context, *ProductStockQuantity) (*emptypb.Empty, error)
+	DecreaseStock(context.Context, *ProductStockQuantity) (*emptypb.Empty, error)
+	ProductById(context.Context, *ItemRequest) (*ProductResponse, error)
 	mustEmbedUnimplementedProductServiceServer()
 }
 
@@ -81,6 +120,15 @@ func (UnimplementedProductServiceServer) List(context.Context, *emptypb.Empty) (
 }
 func (UnimplementedProductServiceServer) ListByCategory(context.Context, *CategoryRequest) (*ListProducts, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListByCategory not implemented")
+}
+func (UnimplementedProductServiceServer) IncreaseStock(context.Context, *ProductStockQuantity) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method IncreaseStock not implemented")
+}
+func (UnimplementedProductServiceServer) DecreaseStock(context.Context, *ProductStockQuantity) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DecreaseStock not implemented")
+}
+func (UnimplementedProductServiceServer) ProductById(context.Context, *ItemRequest) (*ProductResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProductById not implemented")
 }
 func (UnimplementedProductServiceServer) mustEmbedUnimplementedProductServiceServer() {}
 func (UnimplementedProductServiceServer) testEmbeddedByValue()                        {}
@@ -139,6 +187,60 @@ func _ProductService_ListByCategory_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ProductService_IncreaseStock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProductStockQuantity)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProductServiceServer).IncreaseStock(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProductService_IncreaseStock_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProductServiceServer).IncreaseStock(ctx, req.(*ProductStockQuantity))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ProductService_DecreaseStock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProductStockQuantity)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProductServiceServer).DecreaseStock(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProductService_DecreaseStock_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProductServiceServer).DecreaseStock(ctx, req.(*ProductStockQuantity))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ProductService_ProductById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ItemRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProductServiceServer).ProductById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProductService_ProductById_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProductServiceServer).ProductById(ctx, req.(*ItemRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ProductService_ServiceDesc is the grpc.ServiceDesc for ProductService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -153,6 +255,18 @@ var ProductService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ListByCategory",
 			Handler:    _ProductService_ListByCategory_Handler,
+		},
+		{
+			MethodName: "IncreaseStock",
+			Handler:    _ProductService_IncreaseStock_Handler,
+		},
+		{
+			MethodName: "DecreaseStock",
+			Handler:    _ProductService_DecreaseStock_Handler,
+		},
+		{
+			MethodName: "ProductById",
+			Handler:    _ProductService_ProductById_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
