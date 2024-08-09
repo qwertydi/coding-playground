@@ -5,7 +5,7 @@ package products;
 import "google/protobuf/empty.proto";
 
 // Required to generate go
-option go_package = "./";
+option go_package = "github.com/qwertydi/playground/pb/v1";
 option java_package = "com.dmsc.service.model.product";
 option java_multiple_files = true;
 option java_outer_classname = "ProductProto";
@@ -39,14 +39,17 @@ message CategoryRequest {
   string category = 1;
 }
 
-//service StockManagement {
-//  rpc IncreaseStock() returns ();
-//  rpc DecreaseStock() returns ();
-//}
+message ProductStockQuantity {
+  string id = 1;
+  int32 quantity = 2;
+}
 
 service ProductService {
   rpc List(google.protobuf.Empty) returns (ListProducts);
   rpc ListByCategory(CategoryRequest) returns (ListProducts);
+  rpc IncreaseStock(ProductStockQuantity) returns (google.protobuf.Empty);
+  rpc DecreaseStock(ProductStockQuantity) returns (google.protobuf.Empty);
+  rpc ProductById(ItemRequest) returns (ProductResponse);
 }
 
 service AdminProductService {
