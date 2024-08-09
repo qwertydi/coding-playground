@@ -1,17 +1,16 @@
 package com.dmsc.service.product;
 
-import com.dmsc.service.model.product.CategoryRequest;
-import com.dmsc.service.model.product.ListProducts;
-import com.dmsc.service.model.product.ProductResponse;
-import com.dmsc.service.model.product.ProductServiceGrpc;
+import com.dmsc.service.model.product.*;
 import com.dmsc.service.utils.ProductConverterUtils;
 import com.dmsc.service.utils.ValidationUtils;
 import com.google.protobuf.Empty;
+import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.protobuf.ProtobufModule;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @GrpcService
 public class ProductCatalogImpl extends ProductServiceGrpc.ProductServiceImplBase {
@@ -57,5 +56,43 @@ public class ProductCatalogImpl extends ProductServiceGrpc.ProductServiceImplBas
                         responseObserver::onError,
                         responseObserver::onCompleted
                 );
+    }
+
+    @Override
+    public void increaseStock(ProductStockQuantity request, StreamObserver<Empty> responseObserver) {
+        productRepository.findById(request.getId())
+                .switchIfEmpty(Mono.defer(() -> Mono.error(Status.NOT_FOUND.asException())))
+                .flatMap(productEntity -> {
+                    productEntity.setAvailability(productEntity.getAvailability() + request.getQuantity());
+                    return productRepository.save(productEntity);
+                })
+                .subscribe(x -> {
+                    responseObserver.onNext(Empty.newBuilder().build());
+                    responseObserver.onCompleted();
+                }, responseObserver::onError);
+    }
+
+    @Override
+    public void decreaseStock(ProductStockQuantity request, StreamObserver<Empty> responseObserver) {
+        productRepository.findById(request.getId())
+                .switchIfEmpty(Mono.defer(() -> Mono.error(Status.NOT_FOUND.asException())))
+                .flatMap(productEntity -> {
+                    int availability = productEntity.getAvailability();
+                    int quantity = request.getQuantity();
+                    if (availability - quantity < 0) {
+                        return Mono.error(Status.OUT_OF_RANGE.asException());
+                    }
+                    productEntity.setAvailability(availability - quantity);
+                    return productRepository.save(productEntity);
+                })
+                .subscribe(x -> {
+                    responseObserver.onNext(Empty.newBuilder().build());
+                    responseObserver.onCompleted();
+                }, responseObserver::onError);
+    }
+
+    @Override
+    public void productById(ItemRequest request, StreamObserver<ProductResponse> responseObserver) {
+        super.productById(request, responseObserver);
     }
 }
