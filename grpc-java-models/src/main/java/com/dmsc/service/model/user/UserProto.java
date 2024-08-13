@@ -57,8 +57,9 @@ public final class UserProto {
       "r.UserResponse\0225\n\007GetUser\022\026.google.proto" +
       "buf.Empty\032\022.user.UserResponse\022:\n\014GetUser" +
       "Login\022\026.user.AuthenticateUser\032\022.user.Use" +
-      "rResponseB.\n\033com.dmsc.service.model.user" +
-      "B\tUserProtoP\001Z\002./b\006proto3"
+      "rResponseBP\n\033com.dmsc.service.model.user" +
+      "B\tUserProtoP\001Z$github.com/qwertydi/playg" +
+      "round/pb/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -21,7 +21,7 @@ public interface ProductStockQuantityOrBuilder extends
       getIdBytes();
 
   /**
-   * <code>int32 quantity = 2;</code>
+   * <code>int32 quantity = 2 [(.buf.validate.field) = { ... }</code>
    * @return The quantity.
    */
   int getQuantity();

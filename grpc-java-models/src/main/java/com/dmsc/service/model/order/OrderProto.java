@@ -64,14 +64,14 @@ public final class OrderProto {
       "?\n\013OrderStatus\022\n\n\002id\030\001 \001(\t\022$\n\006status\030\002 \001" +
       "(\0162\024.orders.ORDER_STATUS*C\n\014ORDER_STATUS" +
       "\022\013\n\007PENDING\020\000\022\016\n\nPROCESSING\020\001\022\010\n\004SENT\020\002\022" +
-      "\014\n\010RECEIVED\020\0032\321\001\n\026OrderManagementService" +
-      "\022@\n\013CreateOrder\022\032.orders.CreateOrderRequ" +
-      "est\032\025.orders.OrderResponse\0224\n\010GetOrder\022\021" +
-      ".orders.OrderItem\032\025.orders.OrderResponse" +
-      "\022?\n\021UpdateOrderStatus\022\023.orders.OrderStat" +
-      "us\032\025.orders.OrderResponseB0\n\034com.dmsc.se" +
-      "rvice.model.orderB\nOrderProtoP\001Z\002./b\006pro" +
-      "to3"
+      "\014\n\010RECEIVED\020\0032\307\001\n\014OrderService\022@\n\013Create" +
+      "Order\022\032.orders.CreateOrderRequest\032\025.orde" +
+      "rs.OrderResponse\0224\n\010GetOrder\022\021.orders.Or" +
+      "derItem\032\025.orders.OrderResponse\022?\n\021Update" +
+      "OrderStatus\022\023.orders.OrderStatus\032\025.order" +
+      "s.OrderResponseBR\n\034com.dmsc.service.mode" +
+      "l.orderB\nOrderProtoP\001Z$github.com/qwerty" +
+      "di/playground/pb/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
