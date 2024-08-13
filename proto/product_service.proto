@@ -3,6 +3,7 @@ syntax = "proto3";
 package products;
 
 import "google/protobuf/empty.proto";
+import "buf/validate/validate.proto";
 
 // Required to generate go
 option go_package = "github.com/qwertydi/playground/pb/v1";
@@ -11,11 +12,15 @@ option java_multiple_files = true;
 option java_outer_classname = "ProductProto";
 
 message Product {
-  string name = 1;
-  int64 price = 2;
-  string description = 3;
-  string category = 4;
-  int32 availability = 5;
+  string name = 1 [(buf.validate.field).cel = {
+    id: "name",
+    message: "name length must be at least 5 characters",
+    expression: "this.size() >= 5",
+  }];
+  int64 price = 2 [(buf.validate.field).int64 = {gte: 0}];
+  string description = 3 [(buf.validate.field).string = {min_len: 5}];
+  string category = 4 [(buf.validate.field).string = {min_len: 1}];
+  int32 availability = 5  [(buf.validate.field).int32 = {gte: 0}];
 }
 
 message ProductResponse {
@@ -36,12 +41,18 @@ message ItemRequest {
 }
 
 message CategoryRequest {
-  string category = 1;
+  string category = 1 [(buf.validate.field).string = {min_len: 1}];
 }
 
 message ProductStockQuantity {
   string id = 1;
-  int32 quantity = 2;
+  int32 quantity = 2 [(buf.validate.field).cel = {
+    id: "minimum_whole_sale_quantity",
+    message: "quantity must be 0 or greater",
+    // `this` refers to this field and the expression evaluates to a boolean result.
+    // If the result is false, validation will fail with the above error message.
+    expression: "this >= 0",
+  }];
 }
 
 service ProductService {
