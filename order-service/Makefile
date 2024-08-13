@@ -10,4 +10,7 @@ proto:
 	proto-files/*.proto
 	rm -rf proto-files
 
-.PHONY: proto
+mocks:
+	mockgen -source=db/db.go -destination=mocks/mock_mongo_client.go -package=mocks
+
+.PHONY: proto mocks

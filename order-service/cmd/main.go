@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"errors"
+	"github.com/qwertydi/order-service/db"
 	orderpb "github.com/qwertydi/order-service/pb"
 	"github.com/qwertydi/order-service/server"
 	"github.com/qwertydi/order-service/util"
@@ -56,7 +57,11 @@ func runGrpcServer(
 	clientOptions := options.Client().ApplyURI(config.DBUrl)
 
 	// Connect to MongoDB
-	mongoClient, err := mongo.Connect(ctx, clientOptions)
+	mClient, err := mongo.Connect(ctx, clientOptions)
+
+	customMongoClient := &db.MongoClientWrapper{Client: mClient}
+
+	err = customMongoClient.Ping(ctx, nil)
 
 	if err != nil {
 		log.Fatal().Err(err).Msg("cannot create listener")
@@ -64,14 +69,14 @@ func runGrpcServer(
 	}
 
 	// Check the connection
-	if err = mongoClient.Ping(ctx, nil); err != nil {
+	if err = customMongoClient.Ping(ctx, nil); err != nil {
 		log.Fatal().Err(err).Msg("cannot create listener")
 
 	}
 
 	log.Info().Msg("MongoClient connected")
 
-	srv, err := server.NewServer(config, mongoClient)
+	srv, err := server.NewServer(config, customMongoClient)
 	if err != nil {
 		log.Fatal().Err(err).Msg("cannot create server")
 	}
@@ -122,7 +127,7 @@ func runGrpcServer(
 	waitGroup.Go(func() error {
 		<-ctx.Done()
 		log.Info().Msg("graceful shutdown mongo")
-		mongoClient.Disconnect(ctx)
+		_ = customMongoClient.Disconnect(ctx)
 		log.Info().Msg("mongo is stopped")
 
 		return nil

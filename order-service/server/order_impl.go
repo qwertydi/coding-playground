@@ -32,7 +32,7 @@ func (server *Server) CreateOrder(ctx context.Context, request *orderpb.CreateOr
 		SetDefaultReadConcern(readconcern.Majority()).
 		SetDefaultWriteConcern(writeconcern.New(writeconcern.WMajority(), writeconcern.WTimeout(1000)))
 
-	err := server.mongoClient.UseSessionWithOptions(ctx, opts, func(sessionContext mongo.SessionContext) error {
+	sessionRequest := func(sessionContext mongo.SessionContext) error {
 		err := sessionContext.StartTransaction(options.Transaction().
 			SetReadConcern(readconcern.Snapshot()).
 			SetWriteConcern(writeconcern.Majority()),
@@ -65,7 +65,9 @@ func (server *Server) CreateOrder(ctx context.Context, request *orderpb.CreateOr
 		}
 
 		return nil
-	})
+	}
+
+	err := server.mongoClient.UseSessionWithOptions(ctx, opts, sessionRequest)
 	if err != nil {
 		return nil, err
 	}
