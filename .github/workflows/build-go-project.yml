@@ -16,15 +16,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Move mobile app files to root
+        run: |
+          ls -lah
+          mv order-service/* .
+          rm -rf order-service
+          ls -lah
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: ${{ matrix.go-version }}
       - name: Install dependencies
-        working-directory: ./order-service
         run: go get .
       - name: Test with Go
-        working-directory: ./order-service
         run: go test -json > TestResults-${{ matrix.go-version }}.json
       - name: Upload Go test results
         uses: actions/upload-artifact@v4
