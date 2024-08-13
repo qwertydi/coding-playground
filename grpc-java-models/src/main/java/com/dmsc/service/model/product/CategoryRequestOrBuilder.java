@@ -9,12 +9,12 @@ public interface CategoryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string category = 1;</code>
+   * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
    * @return The category.
    */
   java.lang.String getCategory();
   /**
-   * <code>string category = 1;</code>
+   * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for category.
    */
   com.google.protobuf.ByteString

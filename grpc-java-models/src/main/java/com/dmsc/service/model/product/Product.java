@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
    * @return The name.
    */
   @java.lang.Override
@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
   public static final int PRICE_FIELD_NUMBER = 2;
   private long price_ = 0L;
   /**
-   * <code>int64 price = 2;</code>
+   * <code>int64 price = 2 [(.buf.validate.field) = { ... }</code>
    * @return The price.
    */
   @java.lang.Override
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
-   * <code>string description = 3;</code>
+   * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
    * @return The description.
    */
   @java.lang.Override
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string description = 3;</code>
+   * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object category_ = "";
   /**
-   * <code>string category = 4;</code>
+   * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
    * @return The category.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string category = 4;</code>
+   * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for category.
    */
   @java.lang.Override
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static final int AVAILABILITY_FIELD_NUMBER = 5;
   private int availability_ = 0;
   /**
-   * <code>int32 availability = 5;</code>
+   * <code>int32 availability = 5 [(.buf.validate.field) = { ... }</code>
    * @return The availability.
    */
   @java.lang.Override
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -650,7 +650,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
 
     private long price_ ;
     /**
-     * <code>int64 price = 2;</code>
+     * <code>int64 price = 2 [(.buf.validate.field) = { ... }</code>
      * @return The price.
      */
     @java.lang.Override
@@ -684,7 +684,7 @@ private static final long serialVersionUID = 0L;
       return price_;
     }
     /**
-     * <code>int64 price = 2;</code>
+     * <code>int64 price = 2 [(.buf.validate.field) = { ... }</code>
      * @param value The price to set.
      * @return This builder for chaining.
      */
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 price = 2;</code>
+     * <code>int64 price = 2 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearPrice() {
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -754,7 +754,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -780,7 +780,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object category_ = "";
     /**
-     * <code>string category = 4;</code>
+     * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
      * @return The category.
      */
     public java.lang.String getCategory() {
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category = 4;</code>
+     * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for category.
      */
     public com.google.protobuf.ByteString
@@ -813,7 +813,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category = 4;</code>
+     * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
      * @param value The category to set.
      * @return This builder for chaining.
      */
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category = 4;</code>
+     * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCategory() {
@@ -836,7 +836,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category = 4;</code>
+     * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for category to set.
      * @return This builder for chaining.
      */
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
 
     private int availability_ ;
     /**
-     * <code>int32 availability = 5;</code>
+     * <code>int32 availability = 5 [(.buf.validate.field) = { ... }</code>
      * @return The availability.
      */
     @java.lang.Override
@@ -860,7 +860,7 @@ private static final long serialVersionUID = 0L;
       return availability_;
     }
     /**
-     * <code>int32 availability = 5;</code>
+     * <code>int32 availability = 5 [(.buf.validate.field) = { ... }</code>
      * @param value The availability to set.
      * @return This builder for chaining.
      */
@@ -872,7 +872,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 availability = 5;</code>
+     * <code>int32 availability = 5 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAvailability() {

@@ -9,49 +9,49 @@ public interface ProductOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>int64 price = 2;</code>
+   * <code>int64 price = 2 [(.buf.validate.field) = { ... }</code>
    * @return The price.
    */
   long getPrice();
 
   /**
-   * <code>string description = 3;</code>
+   * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
    * @return The description.
    */
   java.lang.String getDescription();
   /**
-   * <code>string description = 3;</code>
+   * <code>string description = 3 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
 
   /**
-   * <code>string category = 4;</code>
+   * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
    * @return The category.
    */
   java.lang.String getCategory();
   /**
-   * <code>string category = 4;</code>
+   * <code>string category = 4 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for category.
    */
   com.google.protobuf.ByteString
       getCategoryBytes();
 
   /**
-   * <code>int32 availability = 5;</code>
+   * <code>int32 availability = 5 [(.buf.validate.field) = { ... }</code>
    * @return The availability.
    */
   int getAvailability();

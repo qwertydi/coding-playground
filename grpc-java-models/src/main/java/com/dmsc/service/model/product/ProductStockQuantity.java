@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   public static final int QUANTITY_FIELD_NUMBER = 2;
   private int quantity_ = 0;
   /**
-   * <code>int32 quantity = 2;</code>
+   * <code>int32 quantity = 2 [(.buf.validate.field) = { ... }</code>
    * @return The quantity.
    */
   @java.lang.Override
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
 
     private int quantity_ ;
     /**
-     * <code>int32 quantity = 2;</code>
+     * <code>int32 quantity = 2 [(.buf.validate.field) = { ... }</code>
      * @return The quantity.
      */
     @java.lang.Override
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
       return quantity_;
     }
     /**
-     * <code>int32 quantity = 2;</code>
+     * <code>int32 quantity = 2 [(.buf.validate.field) = { ... }</code>
      * @param value The quantity to set.
      * @return This builder for chaining.
      */
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 quantity = 2;</code>
+     * <code>int32 quantity = 2 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearQuantity() {

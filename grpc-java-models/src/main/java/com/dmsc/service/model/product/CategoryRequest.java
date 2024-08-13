@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object category_ = "";
   /**
-   * <code>string category = 1;</code>
+   * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
    * @return The category.
    */
   @java.lang.Override
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string category = 1;</code>
+   * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for category.
    */
   @java.lang.Override
@@ -407,7 +407,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object category_ = "";
     /**
-     * <code>string category = 1;</code>
+     * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
      * @return The category.
      */
     public java.lang.String getCategory() {
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category = 1;</code>
+     * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for category.
      */
     public com.google.protobuf.ByteString
@@ -440,7 +440,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category = 1;</code>
+     * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The category to set.
      * @return This builder for chaining.
      */
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category = 1;</code>
+     * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCategory() {
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category = 1;</code>
+     * <code>string category = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for category to set.
      * @return This builder for chaining.
      */
