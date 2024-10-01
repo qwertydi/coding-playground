@@ -55,7 +55,7 @@
         <dependency>
             <groupId>io.github.danielliu1123</groupId>
             <artifactId>grpc-starter-protovalidate</artifactId>
-            <version>3.3.2</version>
+            <version>3.3.4</version>
         </dependency>
 
         <dependency>
