@@ -88,12 +88,12 @@
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
-            <version>1.66.0</version>
+            <version>1.68.0</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-stub</artifactId>
-            <version>1.66.0</version>
+            <version>1.68.0</version>
         </dependency>
         <!-- gRPC Spring Boot starter -->
         <dependency>
